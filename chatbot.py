@@ -1,7 +1,7 @@
 import openai
 import json
 
-client = openai.OpenAI(api_key="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")
+client = openai.OpenAI(api_key="sk-svcacct-02iPFUATSZESApEwMbGStMnEtqJ0ELMAlk2qrcctP8AhOBfkGFem3SbiwYWNghZUKGMjT3BlbkFJNG3VhR4zv3kyLgWgEwXiz_shBKWZH0naT2gxoyXQ9YjEEwFoaPeAXyOU71VZSh269CcA")
 
 with open("faq_data.json", "r") as f:
     faq_data = json.load(f)
