@@ -1,16 +1,13 @@
 import openai
 import json
 
-# Correct way to set up the OpenAI client
 client = openai.OpenAI(api_key="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")
 
-# Load FAQ data from JSON file
 with open("faq_data.json", "r") as f:
     faq_data = json.load(f)
 
 DEFAULT_RESPONSE = "Sorry, I cannot answer that at the moment. Please contact the student organizer for more information."
 
-# Greeting message when chatbot starts
 print("Hi, I am the AI Chatbot for UNC's CUSA.")
 
 def get_semantic_similarity(user_input, question):
@@ -44,12 +41,10 @@ def chat_with_gpt(user_input):
             {"role": "user", "content": user_input}
         ]
     )
-    return response.choices[0].message.content  # Accessing response correctly
+    return response.choices[0].message.content 
 
-    # If no FAQ match, return the default response
     return DEFAULT_RESPONSE
 
-# Main loop for interacting with the chatbot
 if __name__ == "__main__":
     while True:
         user_input = input("You: ")
